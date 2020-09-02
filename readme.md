@@ -4,10 +4,12 @@
   - Build using SpringBoot and gradle as the dependency management tool.
   
     Api Endpoints:
+
         - PUT /word/<word> → Increments word count and returns HTTP 200
         - GET /word/<word> → Returns the count of the word
     
     Assumptions:
+    
         - When the word is not present it return 0
         - Gives error when word is empty
     
