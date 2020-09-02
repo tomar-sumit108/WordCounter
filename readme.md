@@ -14,6 +14,7 @@
         - Gives error when word is empty
     
     Instructions to run:
+      - Make sure port 8080 and 3306 are empty
       - Install docker and docker-compose 
       - Go the main WordCounter folder
       - First generate jar using the following command
