@@ -5,8 +5,8 @@
   
     Api Endpoints:
 
-        - PUT /word/<word> → Increments word count and returns HTTP 200
-        - GET /word/<word> → Returns the count of the word
+        - PUT http://localhost:8080/word/<word> → Increments word count and returns HTTP 200
+        - GET http://localhost:8080/word/<word> → Returns the count of the word
     
     Assumptions:
     
