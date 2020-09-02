@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mysql-standalone1:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=qwerty
+      - MYSQL_DATABASE=sliceassignment
+      - MYSQL_USER=sumit
+      - MYSQL_PASSWORD=qwerty
+  springboot-docker-container:
+    depends_on:
+      - mysql-standalone1
+    image: springboot-docker-container
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-standalone1:3306/sliceassignment?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: "sumit"
+      SPRING_DATASOURCE_PASSWORD: "qwerty"
+    build:
+      context: ./
+      dockerfile: Dockerfile
